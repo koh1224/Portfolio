@@ -1,24 +1,41 @@
-# README
+# Idea Bank
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+デザイナーの発想を補助するサイト
+デザインに必要な要素を一覧で表示し、そこからインスピレーションを想像させる検索結果を表示させる。
+ユーザー登録をすることで検索結果やいいと思った内容を保存でき、他ユーザーはそれを観覧することができる。
+フラットな状態での発想を促すためにランダムなトレンドワードを表示させ、画像と組み合わせて表示させる。
 
-Things you may want to cover:
+### サイトテーマ
+デザイナーのための発想補助
 
-* Ruby version
+### テーマを選んだ理由
+私は前職で商業施設などの設計をするデザイナーをしておりました。
+デザイナーはデザインの方向性を検討する際には新しい発想が求められました。
+この仕事をする上で形状や色、コンセプトなどを検討する際に煮詰まってしまい、
+俯瞰して考えられなくなることがあります。
+そのような状態に陥った時にSNSを観覧するようにフラットな気持ちで発想を促すサイトが
+あればいいと感じこのテーマを設定しました。
 
-* System dependencies
+### ターゲットユーザ
+発想に煮詰まったデザイナー
 
-* Configuration
+### 主な利用シーン
+デザイナーのコンセプトワーク時に個人やチームメンバーとアイデアを共有する。
 
-* Database creation
+## 設計書
+作成後、urlを記載
 
-* Database initialization
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/138wcNhCKGifxw_pF35J6xZO7UFUQQzI_lNaebRHs4FE/edit?usp=sharing
 
-* How to run the test suite
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
+- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
+- 使用しない場合は、使用素材の項目をREADMEから削除してください。
