@@ -15,7 +15,7 @@
         <div class="container">
           <nav class="nav navbar-left">
             <%= link_to root_path, class:"btn btn-link text-white" do %>
-              <span>Bookers</span>
+              <span>Idea Bank</span>
             <% end %>
           </nav>
           <nav>
@@ -27,43 +27,38 @@
                 <% if user_signed_in? %>
                   <li>
                     <%= link_to user_path(current_user), class:"btn btn-link text-white" do %>
-                    <span class="fas fa-home">Home</span>
+                    <span class="fas fa-home"> Home</span>
                     <% end %>
                   </li>
                   <li>
                     <%= link_to users_path, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-users">Users</span>
-                    <% end %>
-                  </li>
-                  <li>
-                    <%= link_to books_path, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-book-open">Books</span>
+                    <span class="fas fa-lightbulb"> My idea</span>
                     <% end %>
                   </li>
                   <li>
                     <%= link_to destroy_user_session_path, method: :delete, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-sign-out-alt">logout</span>
+                    <span class="fas fa-sign-out-alt"> Logout</span>
                     <% end %>
                   </li>
                 <% else %>
                   <li>
                     <%= link_to root_path, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-home">Home</span>
+                    <span class="fas fa-home"> Home</span>
                     <% end %>
                   </li>
                   <li>
                     <%= link_to home_about_path, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-link">About</span>
+                    <span class="fas fa-link"> About</span>
                     <% end %>
                   </li>
                   <li>
                     <%= link_to new_user_registration_path, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-user-plus">sign up</span>
+                    <span class="fas fa-user-plus"> Sign up</span>
                     <% end %>
                   </li>
                   <li>
                     <%= link_to new_user_session_path, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-sign-in-alt">login</span>
+                    <span class="fas fa-sign-in-alt"> Login</span>
                     <% end %>
                   </li>
                 <% end %>
@@ -79,8 +74,13 @@
 
     <%= yield %>
 
-    <footer>
-      <p class="text-center mt-5"> CopyRight Infratop.inc</p>
+    <footer class="mt-4">
+        <div class="row bg-dark">
+          <div class="mx-auto text-white">
+              <p class="mt-3">IdeaBank created by K.Kanayama</p>
+          </div>
+        </div>
+      </nav>
     </footer>
   </body>
 </html>
