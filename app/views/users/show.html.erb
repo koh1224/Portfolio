@@ -8,7 +8,7 @@
             <h3 class="font-weight-bold ml-3">登録情報</h3>
           <table class="table ml-5">
             <tr>
-              <td><%= attachment_image_tag @user, :profile_image, :fill, 400, 400, fallback: "no_image.jpg", class: "image" %></td>
+              <td><%= attachment_image_tag @user, :profile_image, fallback: "no_image.jpg", class: "image", size: "100x100" %></td>
             </tr>
             <tr>
               <th>User Name</th>
@@ -20,7 +20,7 @@
             </tr>
           </table>
     　　    <div class="mb-3 ml-5">
-            <%= link_to "編集する", edit_customers_path, class:"btn btn-success" %>
+            <%= link_to "編集する", edit_user_path, class:"btn btn-success" %>
           </div>
         </div>
     </div>

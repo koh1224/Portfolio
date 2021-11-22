@@ -26,12 +26,12 @@
               <ul class="nav navbar-nav navbar-right">
                 <% if user_signed_in? %>
                   <li>
-                    <%= link_to user_path(current_user), class:"btn btn-link text-white" do %>
+                    <%= link_to ideas_path, class:"btn btn-link text-white" do %>
                     <span class="fas fa-home"> Home</span>
                     <% end %>
                   </li>
                   <li>
-                    <%= link_to users_path, class:"btn btn-link text-white" do %>
+                    <%= link_to user_path(current_user), class:"btn btn-link text-white" do %>
                     <span class="fas fa-lightbulb"> My idea</span>
                     <% end %>
                   </li>

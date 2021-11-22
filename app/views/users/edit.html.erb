@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <div class="row mx-auto">
+    <h2><span><i class="fas fa-angle-double-down"></i> 会員情報編集</span></h2>
+  </div>
+
+  <%= form_with model: @user, local:true do |f| %>
+    <div class="mb-3 row">
+      <div class="col-sm-4">
+        <%= f.label :image %>
+        <%= f.attachment_field :profile_image, class: "form-control-file user_image" %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control name" %>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <div class="col-sm-6">
+      <%= f.submit "編集内容を保存", class:"btn btn-success" %>
+      </div>
+    </div>
+  <% end %>
+</div>
