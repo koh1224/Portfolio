@@ -1,1 +1,36 @@
-<h1>idea index</h1>
+<% @tweets.each do |tweet| %>
+  <%= "#{tweet.attrs[:user][:name]} @#{tweet.attrs[:user][:screen_name]}" %>
+  <p><%= tweet.attrs[:text] %></p>
+<% end %>
+
+<div class='container'>
+  <div class='col-md-10 offset-md-1'>
+    <h1>idea index</h1>
+    <hr>
+    <div class='row'>
+      <div class='col-3'>
+        <a class="image" href="/">
+          <span><%= image_tag 'no_image.jpg', size: '200x200' %></span>
+        </a>
+      </div>
+      <div class='col-3'>
+        <a class="image" href="/">
+          <span><%= image_tag 'no_image.jpg', size: '200x200' %></span>
+        </a>
+      </div>
+      <div class='col-3'>
+        <a class="image" href="/">
+          <span><%= image_tag 'no_image.jpg', size: '200x200' %></span>
+        </a>
+      </div>
+      <div class='col-3'>
+        <a class="image" href="/">
+          <span><%= image_tag 'no_image.jpg', size: '200x200' %></span>
+        </a>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
+
+

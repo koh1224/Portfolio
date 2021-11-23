@@ -13,11 +13,17 @@
 ActiveRecord::Schema.define(version: 2021_11_20_103207) do
 
   create_table "genres", force: :cascade do |t|
+    t.string "form"
+    t.string "texture"
+    t.string "color"
+    t.string "material"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "ideas", force: :cascade do |t|
+    t.integer "genre_id"
+    t.integer "user_id"
     t.string "idea"
     t.text "body"
     t.datetime "created_at", null: false

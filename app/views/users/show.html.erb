@@ -1,26 +1,35 @@
-<div class="container mt-5">
-      <!--<div class="row">-->
-        <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0">
+<div class='container'>
+  <div class='row mt-4 mb-2'>
+      <h1>My Page</h1>
+  </div>
+</div>
 
-          <div class="mb-5">
-            <h2  class="font-weight-bold ml-3 fukidasi"><span><i class="fas fa-angle-double-down"></i> マイページ</span></h2>
-          </div>
-            <h3 class="font-weight-bold ml-3">登録情報</h3>
-          <table class="table ml-5">
-            <tr>
-              <td><%= attachment_image_tag @user, :profile_image, fallback: "no_image.jpg", class: "image", size: "100x100" %></td>
-            </tr>
-            <tr>
-              <th>User Name</th>
-              <td><%= @user.name %></td>
-            </tr>
-            <tr>
-              <th>メールアドレス</th>
-              <td><%= @user.email %></td>
-            </tr>
-          </table>
-    　　    <div class="mb-3 ml-5">
-            <%= link_to "編集する", edit_user_path, class:"btn btn-success" %>
-          </div>
-        </div>
+<div class='container'>
+  <div class='row'>
+    <div class="col-3 px-0 px-2 py-2">
+      <table class="table ml-5">
+        <tr>
+          <td><%= attachment_image_tag @user, :profile_image, fallback: "no_image.jpg", class: "image", size: "100x100" %></td>
+        </tr>
+        <tr>
+          <th>User Name</th>
+          <td><%= @user.name %></td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <td><%= @user.email %></td>
+        </tr>
+      </table>
+      <div class="mb-3 ml-5">
+        <%= link_to "編集する", edit_user_path, class:"btn btn-success" %>
+      </div>
     </div>
+    <div class='col-md-9 offset-md-1'>
+      <div class='row'>
+        <div class='col-md-8 offset-md-2'>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
