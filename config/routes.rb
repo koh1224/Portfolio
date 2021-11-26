@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get "/home/about" => "homes#about"
 
   resources :users
-  resources :ideas
+  resources :ideas do
+    resource :favorites, only: [:create, :destroy]
+  end
   resources :genres
 
 

@@ -31,6 +31,11 @@
                     <% end %>
                   </li>
                   <li>
+                    <%= link_to new_idea_path, class:"btn btn-link text-white" do %>
+                    <span class="fas fa-lightbulb"> Create idea</span>
+                    <% end %>
+                  </li>
+                  <li>
                     <%= link_to user_path(current_user), class:"btn btn-link text-white" do %>
                     <span class="fas fa-lightbulb"> My idea</span>
                     <% end %>

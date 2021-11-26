@@ -1,36 +1,35 @@
-<% @tweets.each do |tweet| %>
-  <%= "#{tweet.attrs[:user][:name]} @#{tweet.attrs[:user][:screen_name]}" %>
-  <p><%= tweet.attrs[:text] %></p>
-<% end %>
 
 <div class='container'>
-  <div class='col-md-10 offset-md-1'>
+
     <h1>idea index</h1>
     <hr>
     <div class='row'>
-      <div class='col-3'>
-        <a class="image" href="/">
-          <span><%= image_tag 'no_image.jpg', size: '200x200' %></span>
-        </a>
-      </div>
-      <div class='col-3'>
-        <a class="image" href="/">
-          <span><%= image_tag 'no_image.jpg', size: '200x200' %></span>
-        </a>
-      </div>
-      <div class='col-3'>
-        <a class="image" href="/">
-          <span><%= image_tag 'no_image.jpg', size: '200x200' %></span>
-        </a>
-      </div>
-      <div class='col-3'>
-        <a class="image" href="/">
-          <span><%= image_tag 'no_image.jpg', size: '200x200' %></span>
-        </a>
-      </div>
+      <% @ideas.each do |idea| %>
+        <div class='col-3 mb-4'>
+          <%= link_to idea_path( idea.id ) do %>
+            <%= attachment_image_tag idea, :image, size: "250x250", fallback: "no_image.jpg" %>
+          <% end %>
+          </br>
+          <h4><%= link_to idea.idea, idea_path(idea), class: "idea_#{idea.id}" %></h4>
+          <h5><%= idea.body %></h5>
+          <div>
+            <% if idea.favorited_by?(current_user) %>
+              <h5>
+                <%= link_to idea_favorites_path(idea), method: :delete do %>
+                  <span class="fas fa-heart"><%= idea.favorites.count %></span>
+                <% end %>
+              </h5>
+            <% else %>
+                <h5>
+                  <%= link_to idea_favorites_path(idea), method: :post do %>
+                    <span class="fas fa-heart"><%= idea.favorites.count %></span>
+                  <% end %>
+                </h5>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
       <hr>
     </div>
-  </div>
+
 </div>
-
-
