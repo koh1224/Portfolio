@@ -14,8 +14,14 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container">
           <nav class="nav navbar-left">
-            <%= link_to root_path, class:"btn btn-link text-white" do %>
-              <span>Idea Bank</span>
+            <% if user_signed_in? %>
+              <%= link_to ideas_path, class:"btn btn-link text-white" do %>
+                <span>Idea Bank</span>
+              <% end %>
+            <% else %>
+              <%= link_to root_path, class:"btn btn-link text-white" do %>
+                <span>Idea Bank</span>
+              <% end %>
             <% end %>
           </nav>
           <nav>
