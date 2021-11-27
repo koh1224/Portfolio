@@ -1,18 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class='mx-auto col-12 col-xl-10'>
-      <div class="text-center">
-        <strong>
-          <h1>ようこそ、Idea Bankへ！</h1>
-          <hr>
-          </br>まずは会員登録しましょう。
-          </br><%= link_to '会員登録', new_user_registration_path, class: "btn btn-lg btn-danger" %>
-          <hr>
-          </br>会員の方はログインして下さい。
-          </br><%= link_to 'ログイン', new_user_session_path, class: "btn btn-lg btn-success" %>
-          <hr>
-        </strong>
-      </div>
+    <div class="col-md-6 offset-md-3 text-center">
+      <h2 class="text-bold mt-4">ようこそ、Idea Bankへ！</h2>
+      <h5 class="text-20">Pinterestのボードを共有するSNSサイト</h5>
+      <hr>
+      <h5 class="text-bold">まずは会員登録しましょう。</h5>
+      <%= link_to '会員登録', new_user_registration_path, class: "btn btn-lg btn-danger mt-2" %>
+      <hr>
+        <h5 class="text-bold">会員の方はログインして下さい。</h5>
+        <%= link_to 'ログイン', new_user_session_path, class: "btn btn-lg btn-success mt-2" %>
+      <hr class="mb-5">
     </div>
   </div>
 </div>

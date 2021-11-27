@@ -21,6 +21,10 @@
     font-family: 'Kosugi', sans-serif;
   }
 
+  .bg_color {
+    background-color: #e5e5e5;
+  }
+
   .text_in_image {
   position: absolute;
   top: 215px;
@@ -67,6 +71,13 @@
     font-size: 20px;
   }
 
+  .text-10 {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
   .text-20 {
     padding: 0;
     margin: 0;
@@ -78,4 +89,8 @@
     padding: 0;
     margin: 0;
     font-size: 30px;
+  }
+
+  .text-bold {
+    font-weight: bold;
   }

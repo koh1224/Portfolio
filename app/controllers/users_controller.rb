@@ -5,7 +5,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @ideas = Idea.where(user_id: @user.id)
     @idea = Idea.new
-    @ideafind = Idea.find(params[:id])
   end
 
   def edit
