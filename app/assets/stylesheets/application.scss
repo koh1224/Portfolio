@@ -16,3 +16,66 @@
   @import "bootstrap";
   @import 'font-awesome-sprockets';
   @import 'font-awesome';
+
+  html {
+    font-family: 'Kosugi', sans-serif;
+  }
+
+  .text_in_image {
+  position: absolute;
+  top: 215px;
+  left: 220px;
+  font-weight: bold;
+  }
+
+  .user_in_image {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-weight: bold;
+  }
+
+  .link-white {
+    text-decoration: none;
+    color: white;
+  }
+
+  .link-black {
+    text-decoration: none;
+    color: black;
+  }
+
+  .link-green {
+    text-decoration: none;
+    color: green;
+  }
+
+  .link-red {
+    text-decoration: none;
+    color: red;
+  }
+
+  .image {
+  border-radius: 5%;
+  }
+
+  .profile_image {
+  border-radius: 50%;
+  }
+
+  .button {
+    font-size: 20px;
+  }
+
+  .text-20 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .text-30 {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+  }

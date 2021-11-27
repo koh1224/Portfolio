@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -15,11 +16,11 @@
         <div class="container">
           <nav class="nav navbar-left">
             <% if user_signed_in? %>
-              <%= link_to ideas_path, class:"btn btn-link text-white" do %>
+              <%= link_to ideas_path, class:"btn btn-link text-white text-30" do %>
                 <span>Idea Bank</span>
               <% end %>
             <% else %>
-              <%= link_to root_path, class:"btn btn-link text-white" do %>
+              <%= link_to root_path, class:"btn btn-link text-white text-30" do %>
                 <span>Idea Bank</span>
               <% end %>
             <% end %>
@@ -33,38 +34,38 @@
                 <% if user_signed_in? %>
                   <li>
                     <%= link_to ideas_path, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-home"> Home</span>
+                    <span class="fas fa-home"> ホーム</span>
                     <% end %>
                   </li>
                   <li>
                     <%= link_to new_idea_path, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-lightbulb"> Create idea</span>
+                    <span class="fas fa-lightbulb"> アイデアを作る</span>
                     <% end %>
                   </li>
                   <li>
                     <%= link_to user_path(current_user), class:"btn btn-link text-white" do %>
-                    <span class="fas fa-lightbulb"> My idea</span>
+                    <span class="fas fa-user-circle"> マイページ</span>
                     <% end %>
                   </li>
                   <li>
                     <%= link_to destroy_user_session_path, method: :delete, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-sign-out-alt"> Logout</span>
+                    <span class="fas fa-sign-out-alt"> ログアウト</span>
                     <% end %>
                   </li>
                 <% else %>
                   <li>
                     <%= link_to home_about_path, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-link"> About</span>
+                    <span class="fas fa-link"> サイトについて</span>
                     <% end %>
                   </li>
                   <li>
                     <%= link_to new_user_registration_path, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-user-plus"> Sign up</span>
+                    <span class="fas fa-user-plus"> 新規登録</span>
                     <% end %>
                   </li>
                   <li>
                     <%= link_to new_user_session_path, class:"btn btn-link text-white" do %>
-                    <span class="fas fa-sign-in-alt"> Login</span>
+                    <span class="fas fa-sign-in-alt"> ログイン</span>
                     <% end %>
                   </li>
                 <% end %>
