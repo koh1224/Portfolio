@@ -10,30 +10,48 @@
           <div>
             <% if @ideafind.favorited_by?(current_user) %>
               <h5>
-                <%= link_to idea_favorites_path(@ideafind), class: "link-red", method: :delete do %>
+                <%= link_to idea_favorites_path(@ideafind), class: "link-white btn btn-danger", method: :delete do %>
                   <span class="fas fa-heart"><%= @ideafind.favorites.count %>件のいいね</span>
                 <% end %>
               </h5>
             <% else %>
                 <h5>
-                  <%= link_to idea_favorites_path(@ideafind), class: "link-red", method: :post do %>
-                    <span class="fas fa-heart">いいね</span>
+                  <%= link_to idea_favorites_path(@ideafind), class: "link-white btn btn-danger", method: :post do %>
+                    <span class="fas fa-heart"> いいね</span>
                   <% end %>
                 </h5>
             <% end %>
           </div>
           <hr>
-          <%= link_to user_path(@ideafind.user), class: "link-black" do %>
-            <%= attachment_image_tag(@ideafind.user, :profile_image, size: "60x60", fallback: "no_image.jpg") %>
-          <% end %>
-          <%= link_to user_path(@ideafind.user), class: "link-black text-30 ml-4" do %>
-            <%= @ideafind.user.name %>
-          <% end %>
+          <h5 class="text-bold">User name</h5>
+          <div class="row" >
+            <div class="col-1" >
+              <%= link_to user_path(@user), class: "link-black" do %>
+                <%= attachment_image_tag(@user, :profile_image, size: "60x60", fallback: "no_image.jpg") %>
+              <% end %>
+            </div>
+            <div class="col-5 text-left my-auto ml-2" >
+              <%= link_to user_path(@user), class: "link-black text-30 ml-4" do %>
+                <%= @ideafind.user.name %>
+              <% end %>
+            </div>
+            <div class="col-5 text-right my-auto">
+              <% if @ideafind.user == current_user %>
+              <% else %>
+                <% if current_user.following?(@ideafind.user) %>
+                  <%= link_to "フォロー中", user_relationships_path(@ideafind.user), method: :delete, class: "btn btn-primary" %>
+                <% else %>
+                  <%= link_to "フォロー", user_relationships_path(@ideafind.user), method: :post, class: "btn btn-success" %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
           <hr>
+          <h5 class="text-bold">コメント</h5>
           <div class="text-20"><%= @ideafind.body %></div>
           <hr>
           <div>
-            <h5>Pinterest</h5>
+            <h5 class="text-bold">Pinterestリンク</h5>
             <a href=<%= @ideafind.url %> >
               <span class="fab fa-pinterest-square text-20 link-black"> <%= @ideafind.url %></span>
             </a>
@@ -42,13 +60,13 @@
           <% if @ideafind.user_id == current_user.id %>
             <div class="button">
               <span class="mr-2">
-                <%= link_to edit_idea_path(@ideafind), class: "link-green" do %>
-                  <span class="fas fa-edit">編集</span>
+                <%= link_to edit_idea_path(@ideafind), class: "link-white btn btn-success" do %>
+                  <span class="fas fa-edit"> 編集</span>
                 <% end %>
               </span>
               <span>
-                <%= link_to idea_path(@ideafind), class: "link-red", method: :delete, data: { confirm: '本当に消しますか？' } do %>
-                  <span class="fas fa-trash-alt">削除</span>
+                <%= link_to idea_path(@ideafind), class: "link-white btn btn-danger", method: :delete, data: { confirm: '本当に消しますか？' } do %>
+                  <span class="fas fa-trash-alt"> 削除</span>
                 <% end %>
               </span>
             </div>

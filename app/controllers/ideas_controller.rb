@@ -9,9 +9,9 @@ class IdeasController < ApplicationController
   end
 
   def index
-    #client = twitter_client
+    client = twitter_client
     #@tweets = client.home_timeline.first(2)
-    #@trends = client.trends(id = 23424856).first(10)
+    @trends = client.trends(id = 23424856).first(10)
     @idea = Idea.new
     @ideas = Idea.all
     @user = current_user
@@ -21,6 +21,7 @@ class IdeasController < ApplicationController
     @idea = Idea.new
     @ideafind = Idea.find(params[:id])
     @user = @ideafind.user
+
   end
 
   def new
