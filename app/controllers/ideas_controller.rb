@@ -31,8 +31,11 @@ class IdeasController < ApplicationController
   def create
     @idea = Idea.new(idea_params)
     @idea.user_id = current_user.id
-    @idea.save!
-    redirect_to ideas_path, notice: "You have created idea successfully."
+    if @idea.save
+      redirect_to ideas_path, notice: "You have created idea successfully."
+    else
+      render :new
+    end
   end
 
   def edit

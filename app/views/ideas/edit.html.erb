@@ -1,3 +1,20 @@
+<div class="container mb-3">
+  <div class="row">
+    <div class="col-md-4 offset-md-4 text-center">
+      <% if @idea.errors.any? %>
+      <div class="text-bold">
+        <%= @idea.errors.count %>件のエラーが発生しました。
+      </div>
+        <% @idea.errors.full_messages.each do |message| %>
+        <div>
+          <%= message %>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 <div class='container'>
   <div class='row'>
     <div class="col-md-4 offset-md-4 text-center">

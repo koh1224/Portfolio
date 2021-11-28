@@ -43,8 +43,9 @@
                     <% end %>
                   </li>
                   <li>
-                    <%= link_to user_path(current_user), class:"btn btn-link text-white" do %>
-                    <span class="fas fa-user-circle"> マイページ</span>
+                    <%= link_to user_path(current_user), class:"btn btn-link text-white my-auto" do %>
+                    <%= attachment_image_tag(current_user, :profile_image, size: "25x25", fallback: "no_image.jpg") %>
+                    <span class="text-bold my-auto"> マイページ</span>
                     <% end %>
                   </li>
                   <li>
