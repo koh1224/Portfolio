@@ -17,20 +17,17 @@
           <nav class="nav navbar-left">
             <% if user_signed_in? %>
               <%= link_to ideas_path, class:"btn btn-link" do %>
-                <%= image_tag 'logo.png', size: '150x60' %>
+                <%= image_tag 'logo.png', size: '160x60' %>
               <% end %>
             <% else %>
               <%= link_to root_path, class:"btn btn-link" do %>
-                <%= image_tag 'logo.png', size: '150x60' %>
+                <%= image_tag 'logo.png', size: '160x60' %>
               <% end %>
             <% end %>
           </nav>
           <nav>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="nav navbar-nav navbar-right">
+            <div>
+              <ul class="navbar-nav navbar-right">
                 <% if user_signed_in? %>
                   <li>
                     <%= link_to ideas_path, class:"btn btn-link text-white" do %>
@@ -54,6 +51,11 @@
                     <% end %>
                   </li>
                 <% else %>
+                  <li>
+                    <%= link_to root_path, class:"btn btn-link text-white" do %>
+                    <span class="fas fa-home"> ホーム</span>
+                    <% end %>
+                  </li>
                   <li>
                     <%= link_to home_about_path, class:"btn btn-link text-white" do %>
                     <span class="fas fa-link"> サイトについて</span>

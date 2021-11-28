@@ -50,11 +50,20 @@
           <h5 class="text-bold">コメント</h5>
           <div class="text-20"><%= @ideafind.body %></div>
           <hr>
-          <div>
-            <h5 class="text-bold">Pinterestリンク</h5>
-            <a href=<%= @ideafind.url %> >
-              <span class="fab fa-pinterest-square text-20 link-black"> <%= @ideafind.url %></span>
-            </a>
+          <div class="mb-3">
+            <h5 class="text-bold">Pinterestボードリンク</h5>
+          </div>
+          <div class="row" >
+            <div class="col-7 text-left my-auto" >
+              <a href="<%= @ideafind.url %>"target="_blank" rel="noopener noreferrer" >
+                <span class="fab fa-pinterest-square text-20 link-black"> <%= @ideafind.url %></span>
+              </a>
+            </div>
+            <div class="col-5 text-right my-auto">
+              <a href="https://www.pinterest.jp/"target="_blank" rel="noopener noreferrer" class="link-white btn btn-danger btn-sm" >
+                <span>Pinterestはこちら</span>
+              </a>
+            </div>
           </div>
           <hr>
           <% if @ideafind.user_id == current_user.id %>

@@ -6,7 +6,9 @@
       </h4>
       <div>
         <% @trends.each do |trend| %>
-          <p class='text-15 mx-1 link-white btn btn-info mb-2'><%= trend.name %></p>
+        <a href="https://twitter.com/search?q=<%= trend.name %>"target="_blank" rel="noopener noreferrer" >
+          <p class='text-15 mx-1 link-white btn btn-info mb-2 px-2 py-1'><%= trend.name %></p>
+        </a>
         <% end %>
       </div>
     </div>
