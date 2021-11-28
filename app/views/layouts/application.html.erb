@@ -17,11 +17,11 @@
           <nav class="nav navbar-left">
             <% if user_signed_in? %>
               <%= link_to ideas_path, class:"btn btn-link" do %>
-                <%= image_tag 'site_logo.png', size: '160x60' %>
+                <%= image_tag 'logo.png', size: '160x60' %>
               <% end %>
             <% else %>
               <%= link_to root_path, class:"btn btn-link" do %>
-                <%= image_tag 'site_logo.png', size: '160x60' %>
+                <%= image_tag 'logo.png', size: '160x60' %>
               <% end %>
             <% end %>
           </nav>
