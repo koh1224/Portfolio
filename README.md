@@ -39,4 +39,4 @@ https://docs.google.com/spreadsheets/d/138wcNhCKGifxw_pF35J6xZO7UFUQQzI_lNaebRHs
 - Twitter API
 
 ## 使用素材
-使用検討中です。
+使用検討中
