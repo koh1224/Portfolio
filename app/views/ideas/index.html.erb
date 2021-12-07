@@ -42,6 +42,9 @@
           <h6 class="link-white"><%= idea.user.name %></h6>
         </div>
         </br>
+        <% idea.tags.each do |tag| %>
+        <span class="text-10 link-white btn btn-secondary px-1 py-1"><%= tag.name %></span>
+        <% end %>
         <div class='mt-2'>
           <%= link_to idea_path(idea.id), class: "link-black" do %>
             <h4><%= idea.idea %></h4>

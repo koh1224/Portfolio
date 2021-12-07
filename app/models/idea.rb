@@ -1,6 +1,8 @@
 class Idea < ApplicationRecord
   belongs_to :genre, optional: true
   belongs_to :user
+  
+  has_many :tags, dependent: :destroy
 
   has_many :favorites, dependent: :destroy
 

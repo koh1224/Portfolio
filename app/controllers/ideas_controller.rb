@@ -32,6 +32,10 @@ class IdeasController < ApplicationController
     @idea = Idea.new(idea_params)
     @idea.user_id = current_user.id
     if @idea.save
+      tags = Vision.get_image_data(@idea.image)
+      tags.each do |tag|
+        @idea.tags.create(name: tag)
+      end
       redirect_to ideas_path, notice: "You have created idea successfully."
     else
       render :new
