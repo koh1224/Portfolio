@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   end
   resources :genres
 
+  get "search" => "ideas#search"
 
 end

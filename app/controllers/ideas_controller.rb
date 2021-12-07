@@ -66,6 +66,12 @@ class IdeasController < ApplicationController
     redirect_to ideas_path, notice: "idea was successfully destroyed."
   end
 
+  def search
+    @ideas = Idea.search(params[:word])
+    @word = params[:word]
+    render "search_result"
+  end
+
   private
 
   def idea_params
