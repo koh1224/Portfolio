@@ -37,6 +37,3 @@ https://docs.google.com/spreadsheets/d/138wcNhCKGifxw_pF35J6xZO7UFUQQzI_lNaebRHs
 - IDE：Cloud9
 - Google Vision API
 - Twitter API
-
-## 使用素材
-使用検討中
