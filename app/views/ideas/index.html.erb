@@ -29,21 +29,6 @@
         <%= link_to idea_path( idea.id ) do %>
           <%= attachment_image_tag idea, :image, size: "250x250", fallback: "no_idea_image.jpg" %>
         <% end %>
-        <div class="text_in_image">
-          <% if idea.favorited_by?(current_user) %>
-            <h5>
-              <%= link_to idea_favorites_path(idea), class:"link-white", method: :delete do %>
-                <span class="fas fa-heart"><%= idea.favorites.count %></span>
-              <% end %>
-            </h5>
-          <% else %>
-              <h5>
-                <%= link_to idea_favorites_path(idea), class:"link-white", method: :post do %>
-                  <span class="fas fa-heart"><%= idea.favorites.count %></span>
-                <% end %>
-              </h5>
-          <% end %>
-        </div>
         <div class="user_in_image">
           <%= attachment_image_tag(idea.user, :profile_image, size: "30x30", fallback: "no_image.jpg") %>
           <h6 class="link-white"><%= idea.user.name %></h6>
